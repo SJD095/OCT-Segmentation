@@ -1,10 +1,10 @@
 # OCT Segmentation Guide
 
-###Zhongyang Sun  szy019@gmail.com
+### Zhongyang Sun  szy019@gmail.com
 
 
 
-##Environment
+## Environment
 
 ### Hardware
 
