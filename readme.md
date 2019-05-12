@@ -100,30 +100,26 @@ fcn_16s - models - OCT_Segmentation.caffemodel
 
 ### Training
 
-1.Copy images in training set to originalImages folder
+1.Copy images in training set to ```originalImages``` folder
 
-2.Generate label files for every image in training set, and store in Labels folder
+2.Generate label files for every image in training set, and store in ```Labels``` folder
 
-3.Write name of images in trainset set in test.txt
+3.Write name of images in trainset set in ```test.txt```
 
-4.Modify slove.py, solver.protxt, identify training processes and parameters
+4.Modify ```slove.py```, ```solver.protxt```, identify training processes and parameters
 
-5.Execute ```python3 solve.py``` ，start training and store trained model in molders folder
+5.Execute ```python3 solve.py``` ，start training and store trained model in ```moldels``` folder
 
 ### Testing
 
-1.Copy images in test set to originalImage folder
+1.Copy images in test set to ```originalImage``` folder
 
-2.Write name of images in test set in train.txt
+2.Write name of images in test set in ```train.txt```
 
-3.Execute ```python3 infer_collection.py``` ，segmentation images in test set, and store the segmentation result in results folder
+3.Execute ```python3 infer_collection.py``` ，segmentation images in test set, and store the segmentation result in ```results``` folder
 
 
 
-## Support
+## THOCT1800 Dataset
 
-| File name            | Function                                                     |
-| -------------------- | ------------------------------------------------------------ |
-| generateLabelFiles.m | Generate label files from annotate images                    |
-| calMeanIU.m          | Estimate segmentation performance through MeanIU with segmentated images and annotate images |
-
+This dataset consists of 1800 preprocessed retinal SD-OCT B-scans (600 AMD, 600 DME, and 600 NOR), all images are intended for use in research and education situations, and every use of this dataset should include citation in their corresponding papers.
