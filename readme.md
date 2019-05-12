@@ -43,7 +43,7 @@ data - oct - Labels - *.mat
  |              |
  |           trainval.txt
  | 
-fcn_16s - models - OCT_Segmentation.caffemodel
+FCN_16s - models - OCT_Segmentation.caffemodel
             |         |
             |      siftflow-fcn16s-heavy.caffemodel
             |       
