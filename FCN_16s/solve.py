@@ -11,10 +11,13 @@ try:
 except:
     pass
 
-weights = 'models/OCT.caffemodel'
+weights = 'models/OCT_Segmentation.caffemodel'
 
-fcn_weights = 'models/siftflow-fcn16s-heavy.caffemodel'
-fcn_proto = 'deploy_16.prototxt'
+vgg_weights = '../ilsvrc-nets/vgg16-fcn.caffemodel'  
+vgg_proto = '../ilsvrc-nets/VGG_ILSVRC_16_layers_deploy.prototxt'  
+
+fcn_weights = 'models/siftflow-fcn16s-heavy.caffemodel'  
+fcn_proto = 'train.prototxt'  
 
 # init
 caffe.set_device(0)
@@ -23,12 +26,12 @@ caffe.set_mode_gpu()
 solver = caffe.SGDSolver('solver.prototxt')
 solver.net.copy_from(weights)
 
-#vgg_net=caffe.Net(vgg_proto,vgg_weights,caffe.TRAIN)
-#surgery.transplant(solver.net,vgg_net)
+#vgg_net=caffe.Net(vgg_proto,vgg_weights,caffe.TRAIN)  
+#surgery.transplant(solver.net,vgg_net)  
 #del vgg_net
 
-#fcn_net=caffe.Net(fcn_proto,fcn_weights,caffe.TRAIN)
-#surgery.transplant(solver.net,fcn_net)
+#fcn_net=caffe.Net(fcn_proto,fcn_weights,caffe.TRAIN)  
+#surgery.transplant(solver.net,fcn_net)  
 #del fcn_net
 
 # surgeries

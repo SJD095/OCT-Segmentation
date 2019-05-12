@@ -18,4 +18,4 @@ max_iter: 300000
 weight_decay: 0.0005
 test_initialization: false
 snapshot:2000
-snapshot_prefix:"models/OCT"
+snapshot_prefix:"models/1st"

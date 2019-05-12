@@ -52,14 +52,14 @@ class OCTDataLayer(caffe.Layer):
         pass
 
     def load_image(self, idx):
-        im = Image.open('{}/originalImages/{}.jpg'.format(self.oct_dir, idx))
+        im = Image.open('{}/originalImages/{}'.format(self.oct_dir, idx))
         in_ = np.array(im, dtype=np.float32)
         in_ -= in_.mean()
         in_ = in_.reshape(1, in_.shape[0], in_.shape[1])
         return in_
 
     def load_label(self, idx):
-        label = scipy.io.loadmat('{}/Labels/{}.mat'.format(self.oct_dir, idx))['L']
+        label = scipy.io.loadmat('{}/Labels/{}'.format(self.oct_dir, idx))['L']
         label = label.astype(np.uint8)
         label -= 1
         label = label[np.newaxis, ...]
